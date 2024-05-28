@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOM and Dad</title>
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             background-color: #111;
             margin: 0;
             padding: 0;
+            color: #fff;
         }
 
         .container {
@@ -21,6 +22,7 @@
         h1 {
             text-align: center;
             margin: 20px 0;
+            color: #fff;
         }
 
         form {
@@ -37,6 +39,9 @@
         form input {
             padding: 10px;
             margin-top: 5px;
+            border-radius: 10px;
+            border: 1px solid blue;
+            outline: none;
         }
 
         form button {
@@ -46,6 +51,7 @@
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 20px;
         }
 
         form button:hover {
@@ -69,6 +75,11 @@
 
         th {
             background-color: #f2f2f2;
+            color: #111;
+        }
+
+        tbody {
+            color: #fff;
         }
 
         .actions button {
@@ -76,6 +87,7 @@
             margin: 2px;
             border: none;
             cursor: pointer;
+            border-radius: 20px;
         }
 
         .actions .edit {
@@ -101,42 +113,53 @@
             margin-top: 20px;
             font-size: 1.2em;
         }
-        label{
-            color: #fff;
-        }
-        h1{
-            color: #fff;
-        }
-        p{
-            color: #fff;
-        }
-        tbody{
-            color: #fff;
-        }
-        input{
-            border-radius: 10px;
-            outline: none;
-            border: blue;
-        }
-        button{
-            border-radius: 20px;
-        }
-        #delete-all{
+
+        #delete-all {
             background: transparent;
             color: #fff;
             border: solid 1px #fff;
             outline: none;
             border-radius: 20px;
-            width: 300px;
             height: 35px;
             cursor: pointer;
             transition: 0.5s;
-            position: relative;
-            left: 24.9rem;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
         }
-        #delete-all:hover{
+
+        #delete-all:hover {
             background-color: red;
             border: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            form {
+                width: 100%;
+                max-width: none;
+            }
+
+            #delete-all {
+                max-width: none;
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            form input, form button {
+                padding: 8px;
+            }
+
+            #delete-all {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
